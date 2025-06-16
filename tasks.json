@@ -1,2388 +1,2047 @@
 [
     {
         "subject": "がんとともに生きる",
-        "title": "第1回",
-        "type": "小テスト",
+        "title": "第1回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第1回",
-        "type": "アンケート",
+        "title": "第1回(アンケート)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.5"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第2回",
-        "type": "小テスト",
+        "title": "第2回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第2回",
-        "type": "アンケート",
+        "title": "第2回(アンケート)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.5"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第3回",
-        "type": "小テスト",
+        "title": "第3回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第3回",
-        "type": "アンケート",
+        "title": "第3回(アンケート)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.5"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第4回",
-        "type": "小テスト",
+        "title": "第4回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第5回",
-        "type": "映像授業",
+        "title": "第5回(映像授業)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "1.5"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第5回",
-        "type": "小テスト",
+        "title": "第5回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第5回",
-        "type": "アンケート",
+        "title": "第5回(アンケート)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.5"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第6回",
-        "type": "映像授業",
+        "title": "第6回(映像授業)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "1.5"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第6回",
-        "type": "小テスト",
+        "title": "第6回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第6回",
-        "type": "アンケート",
+        "title": "第6回(アンケート)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.5"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第7回",
-        "type": "映像授業",
+        "title": "第7回(映像授業)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "2"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第7回",
-        "type": "小テスト",
+        "title": "第7回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第7回",
-        "type": "アンケート",
+        "title": "第7回(アンケート)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.5"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第8回",
-        "type": "映像授業",
+        "title": "第8回(映像授業)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "1.5"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第8回",
-        "type": "小テスト",
+        "title": "第8回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第8回",
-        "type": "アンケート",
+        "title": "第8回(アンケート)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "1"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第8回",
-        "type": "ディスカッション",
+        "title": "第8回(ディスカッション)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.5"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第8回",
-        "type": "最終テスト",
+        "title": "最終テスト",
         "deadline": "2025/07/09",
         "estimated_time_hours": "1"
     },
     {
         "subject": "がんとともに生きる",
-        "title": "第8回",
-        "type": "レポート",
+        "title": "第8回(レポート)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "40"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第1回",
-        "type": "映像授業",
+        "title": "第1回(映像授業)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "1.5"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第1回",
-        "type": "小テスト",
+        "title": "第1回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第2回",
-        "type": "映像授業",
+        "title": "第2回(映像授業)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "2"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第2回",
-        "type": "小テスト",
+        "title": "第2回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第3回",
-        "type": "映像授業",
+        "title": "第3回(映像授業)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "2"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第3回",
-        "type": "小テスト",
+        "title": "第3回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第4回",
-        "type": "映像授業",
+        "title": "第4回(映像授業)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "2"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第4回",
-        "type": "小テスト",
+        "title": "第4回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第5回",
-        "type": "映像授業",
+        "title": "第5回(映像授業)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "1.4"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第5回",
-        "type": "小テスト",
+        "title": "第5回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第6回",
-        "type": "映像授業",
+        "title": "第6回(映像授業)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "1.5"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第6回",
-        "type": "小テスト",
+        "title": "第6回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第7回",
-        "type": "映像授業",
+        "title": "第7回(映像授業)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "1.4"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第7回",
-        "type": "小テスト",
+        "title": "第7回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第8回",
-        "type": "映像授業",
+        "title": "第8回(映像授業)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "1.4"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第8回",
-        "type": "小テスト",
+        "title": "第8回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第9回",
-        "type": "映像授業",
+        "title": "第9回(映像授業)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "1.4"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第9回",
-        "type": "小テスト",
+        "title": "第9回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第10回",
-        "type": "映像授業",
+        "title": "第10回(映像授業)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "1.4"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第10回",
-        "type": "小テスト",
+        "title": "第10回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第11回",
-        "type": "映像授業",
+        "title": "第11回(映像授業)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "1.5"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第11回",
-        "type": "小テスト",
+        "title": "第11回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第12回",
-        "type": "映像授業",
+        "title": "第12回(映像授業)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "2"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第12回",
-        "type": "小テスト",
+        "title": "第12回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第13回",
-        "type": "映像授業",
+        "title": "第13回(映像授業)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "1.4"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第13回",
-        "type": "小テスト",
+        "title": "第13回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第14回",
-        "type": "映像授業",
+        "title": "第14回(映像授業)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "2"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第14回",
-        "type": "小テスト",
+        "title": "第14回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第15回",
-        "type": "映像授業",
+        "title": "第15回(映像授業)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "1.4"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第15回",
-        "type": "小テスト",
+        "title": "第15回(小テスト)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "0.1"
     },
     {
         "subject": "特別支援教育基礎論",
-        "title": "第15回",
-        "type": "レポート",
+        "title": "第15回(レポート)",
         "deadline": "2025/07/09",
         "estimated_time_hours": "40"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第1回",
-        "type": "映像授業",
+        "title": "第1回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第2回",
-        "type": "映像授業",
+        "title": "第2回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第3回",
-        "type": "映像授業",
+        "title": "第3回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第4回",
-        "type": "映像授業",
+        "title": "第4回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第5回",
-        "type": "映像授業",
+        "title": "第5回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第6回",
-        "type": "映像授業",
+        "title": "第6回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第7回",
-        "type": "映像授業",
+        "title": "第7回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者・障害児心理学",
         "title": "第8回",
-        "type": "テキスト",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第8回",
-        "type": "映像授業",
+        "title": "第8回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者・障害児心理学",
         "title": "第9回",
-        "type": "テキスト",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第9回",
-        "type": "映像授業",
+        "title": "第9回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者・障害児心理学",
         "title": "第10回",
-        "type": "テキスト",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第10回",
-        "type": "映像授業",
+        "title": "第10回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第11回",
-        "type": "テキスト",
+        "title": "第11回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第11回",
-        "type": "映像授業",
+        "title": "第11回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第12回",
-        "type": "テキスト",
+        "title": "第12回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第12回",
-        "type": "映像授業",
+        "title": "第12回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第13回",
-        "type": "テキスト",
+        "title": "第13回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第13回",
-        "type": "映像授業",
+        "title": "第13回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第14回",
-        "type": "テキスト",
+        "title": "第14回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第14回",
-        "type": "映像授業",
+        "title": "第14回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第15回",
-        "type": "テキスト",
+        "title": "第15回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "障害者・障害児心理学",
-        "title": "第15回",
-        "type": "映像授業",
+        "title": "第15回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者・障害児心理学",
         "title": "試験",
-        "type": "単位認定試験",
         "deadline": "2024/07/24",
         "estimated_time_hours": "1"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第1回",
-        "type": "映像授業",
+        "title": "第1回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第2回",
-        "type": "映像授業",
+        "title": "第2回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第3回",
-        "type": "映像授業",
+        "title": "第3回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第4回",
-        "type": "映像授業",
+        "title": "第4回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第5回",
-        "type": "映像授業",
+        "title": "第5回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第6回",
-        "type": "映像授業",
+        "title": "第6回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第7回",
-        "type": "映像授業",
+        "title": "第7回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第8回",
-        "type": "テキスト",
+        "title": "第8回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第8回",
-        "type": "映像授業",
+        "title": "第8回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第9回",
-        "type": "テキスト",
+        "title": "第9回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第9回",
-        "type": "映像授業",
+        "title": "第9回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第10回",
-        "type": "テキスト",
+        "title": "第10回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第10回",
-        "type": "映像授業",
+        "title": "第10回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第11回",
-        "type": "テキスト",
+        "title": "第11回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第11回",
-        "type": "映像授業",
+        "title": "第11回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第12回",
-        "type": "テキスト",
+        "title": "第12回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第12回",
-        "type": "映像授業",
+        "title": "第12回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第13回",
-        "type": "テキスト",
+        "title": "第13回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第13回",
-        "type": "映像授業",
+        "title": "第13回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第14回",
-        "type": "テキスト",
+        "title": "第14回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第14回",
-        "type": "映像授業",
+        "title": "第14回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第15回",
-        "type": "テキスト",
+        "title": "第15回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "今日のメンタルヘルス",
-        "title": "第15回",
-        "type": "映像授業",
+        "title": "(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "今日のメンタルヘルス",
         "title": "試験",
-        "type": "単位認定試験",
         "deadline": "2024/07/24",
         "estimated_time_hours": "1"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第1回",
-        "type": "映像授業",
+        "title": "第1回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第2回",
-        "type": "映像授業",
+        "title": "第2回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第3回",
-        "type": "映像授業",
+        "title": "第3回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第4回",
-        "type": "映像授業",
+        "title": "第4回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第5回",
-        "type": "映像授業",
+        "title": "第5回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第6回",
-        "type": "映像授業",
+        "title": "第6回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第7回",
-        "type": "映像授業",
+        "title": "第7回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第8回",
-        "type": "テキスト",
+        "title": "第8回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第8回",
-        "type": "映像授業",
+        "title": "第8回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第9回",
-        "type": "テキスト",
+        "title": "第9回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第9回",
-        "type": "映像授業",
+        "title": "第9回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第10回",
-        "type": "テキスト",
+        "title": "第10回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第10回",
-        "type": "映像授業",
+        "title": "第10回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第11回",
-        "type": "テキスト",
+        "title": "第11回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第11回",
-        "type": "映像授業",
+        "title": "第11回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第12回",
-        "type": "テキスト",
+        "title": "第12回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第12回",
-        "type": "映像授業",
+        "title": "第12回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第13回",
-        "type": "テキスト",
+        "title": "第13回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第13回",
-        "type": "映像授業",
+        "title": "第13回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第14回",
-        "type": "テキスト",
+        "title": "第14回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第14回",
-        "type": "映像授業",
+        "title": "第14回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第15回",
-        "type": "テキスト",
+        "title": "第15回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "肢体不自由児の教育",
-        "title": "第15回",
-        "type": "映像授業",
+        "title": "第15回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "肢体不自由児の教育",
         "title": "試験",
-        "type": "単位認定試験",
         "deadline": "2024/07/24",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理学研究法",
-        "title": "第1回",
-        "type": "映像授業",
+        "title": "第1回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理学研究法",
-        "title": "第2回",
-        "type": "映像授業",
+        "title": "第2回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理学研究法",
-        "title": "第3回",
-        "type": "映像授業",
+        "title": "第3回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理学研究法",
-        "title": "第4回",
-        "type": "映像授業",
+        "title": "第4回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理学研究法",
-        "title": "第5回",
-        "type": "映像授業",
+        "title": "第5回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理学研究法",
-        "title": "第6回",
-        "type": "映像授業",
+        "title": "第6回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理学研究法",
-        "title": "第7回",
-        "type": "映像授業",
+        "title": "第7回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理学研究法",
-        "title": "第8回",
-        "type": "テキスト",
+        "title": "第8回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "心理学研究法",
-        "title": "第8回",
-        "type": "映像授業",
+        "title": "第8回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理学研究法",
-        "title": "第9回",
-        "type": "テキスト",
+        "title": "第9回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "心理学研究法",
-        "title": "第9回",
-        "type": "映像授業",
+        "title": "第9回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理学研究法",
-        "title": "第10回",
-        "type": "テキスト",
+        "title": "第10回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "心理学研究法",
-        "title": "第10回",
-        "type": "映像授業",
+        "title": "第10回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理学研究法",
-        "title": "第11回",
-        "type": "テキスト",
+        "title": "第11回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "心理学研究法",
-        "title": "第11回",
-        "type": "映像授業",
+        "title": "第11回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理学研究法",
-        "title": "第12回",
-        "type": "テキスト",
+        "title": "第12回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "心理学研究法",
-        "title": "第12回",
-        "type": "映像授業",
+        "title": "第12回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理学研究法",
-        "title": "第13回",
-        "type": "テキスト",
+        "title": "第13回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "心理学研究法",
-        "title": "第13回",
-        "type": "映像授業",
+        "title": "第13回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理学研究法",
-        "title": "第14回",
-        "type": "テキスト",
+        "title": "第14回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "心理学研究法",
-        "title": "第14回",
-        "type": "映像授業",
+        "title": "第14回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理学研究法",
-        "title": "第15回",
-        "type": "テキスト",
+        "title": "第15回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "心理学研究法",
-        "title": "第15回",
-        "type": "映像授業",
+        "title": "第15回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理学研究法",
         "title": "試験",
-        "type": "単位認定試験",
         "deadline": "2024/07/24",
         "estimated_time_hours": "1"
     },
     {
         "subject": "福祉心理学",
-        "title": "第1回",
-        "type": "映像授業",
+        "title": "第1回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "福祉心理学",
-        "title": "第2回",
-        "type": "映像授業",
+        "title": "第2回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "福祉心理学",
-        "title": "第3回",
-        "type": "映像授業",
+        "title": "第3回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "福祉心理学",
-        "title": "第4回",
-        "type": "映像授業",
+        "title": "第4回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "福祉心理学",
-        "title": "第5回",
-        "type": "映像授業",
+        "title": "第5回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "福祉心理学",
-        "title": "第6回",
-        "type": "映像授業",
+        "title": "第6回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "福祉心理学",
-        "title": "第7回",
-        "type": "映像授業",
+        "title": "第7回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "福祉心理学",
-        "title": "第8回",
-        "type": "テキスト",
+        "title": "第8回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "福祉心理学",
-        "title": "第8回",
-        "type": "映像授業",
+        "title": "第8回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "福祉心理学",
-        "title": "第9回",
-        "type": "テキスト",
+        "title": "第9回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "福祉心理学",
-        "title": "第9回",
-        "type": "映像授業",
+        "title": "第9回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "福祉心理学",
-        "title": "第10回",
-        "type": "テキスト",
+        "title": "第10回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "福祉心理学",
-        "title": "第10回",
-        "type": "映像授業",
+        "title": "第10回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "福祉心理学",
-        "title": "第11回",
-        "type": "テキスト",
+        "title": "第11回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "福祉心理学",
-        "title": "第11回",
-        "type": "映像授業",
+        "title": "第11回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "福祉心理学",
-        "title": "第12回",
-        "type": "テキスト",
+        "title": "第12回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "福祉心理学",
-        "title": "第12回",
-        "type": "映像授業",
+        "title": "第12回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "福祉心理学",
-        "title": "第13回",
-        "type": "テキスト",
+        "title": "第13回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "福祉心理学",
-        "title": "第13回",
-        "type": "映像授業",
+        "title": "第13回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "福祉心理学",
-        "title": "第14回",
-        "type": "テキスト",
+        "title": "第14回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "福祉心理学",
-        "title": "第14回",
-        "type": "映像授業",
+        "title": "第14回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "福祉心理学",
-        "title": "第15回",
-        "type": "テキスト",
+        "title": "第15回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "福祉心理学",
-        "title": "第15回",
-        "type": "映像授業",
+        "title": "第15回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "福祉心理学",
         "title": "試験",
-        "type": "単位認定試験",
         "deadline": "2024/07/24",
         "estimated_time_hours": "1"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第1回",
-        "type": "映像授業",
+        "title": "第1回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第2回",
-        "type": "映像授業",
+        "title": "第2回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第3回",
-        "type": "映像授業",
+        "title": "第3回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第4回",
-        "type": "映像授業",
+        "title": "第4回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第5回",
-        "type": "映像授業",
+        "title": "第5回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第6回",
-        "type": "映像授業",
+        "title": "第6回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第7回",
-        "type": "映像授業",
+        "title": "第7回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第8回",
-        "type": "テキスト",
+        "title": "第8回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第8回",
-        "type": "映像授業",
+        "title": "第8回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第9回",
-        "type": "テキスト",
+        "title": "第9回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第9回",
-        "type": "映像授業",
+        "title": "第9回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第10回",
-        "type": "テキスト",
+        "title": "第10回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第10回",
-        "type": "映像授業",
+        "title": "第10回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第11回",
-        "type": "テキスト",
+        "title": "第11回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第11回",
-        "type": "映像授業",
+        "title": "第11回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第12回",
-        "type": "テキスト",
+        "title": "第12回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第12回",
-        "type": "映像授業",
+        "title": "第12回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第13回",
-        "type": "テキスト",
+        "title": "第13回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第13回",
-        "type": "映像授業",
+        "title": "第13回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第14回",
-        "type": "テキスト",
+        "title": "第14回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第14回",
-        "type": "映像授業",
+        "title": "第14回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第15回",
-        "type": "テキスト",
+        "title": "第15回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "臨床心理学概論",
-        "title": "第15回",
-        "type": "映像授業",
+        "title": "第15回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "臨床心理学概論",
         "title": "試験",
-        "type": "単位認定試験",
         "deadline": "2024/07/24",
         "estimated_time_hours": "1"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第1回",
-        "type": "映像授業",
+        "title": "第1回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第2回",
-        "type": "映像授業",
+        "title": "第2回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第3回",
-        "type": "映像授業",
+        "title": "第3回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第4回",
-        "type": "映像授業",
+        "title": "第4回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第5回",
-        "type": "映像授業",
+        "title": "第5回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第6回",
-        "type": "映像授業",
+        "title": "第6回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第7回",
-        "type": "映像授業",
+        "title": "第7回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第8回",
-        "type": "テキスト",
+        "title": "第8回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第8回",
-        "type": "映像授業",
+        "title": "第8回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第9回",
-        "type": "テキスト",
+        "title": "第9回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第9回",
-        "type": "映像授業",
+        "title": "第9回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第10回",
-        "type": "テキスト",
+        "title": "第10回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第10回",
-        "type": "映像授業",
+        "title": "第10回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第11回",
-        "type": "テキスト",
+        "title": "第11回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第11回",
-        "type": "映像授業",
+        "title": "第11回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第12回",
-        "type": "テキスト",
+        "title": "第12回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第12回",
-        "type": "映像授業",
+        "title": "第12回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第13回",
-        "type": "テキスト",
+        "title": "第13回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第13回",
-        "type": "映像授業",
+        "title": "第13回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第14回",
-        "type": "テキスト",
+        "title": "第14回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第14回",
-        "type": "映像授業",
+        "title": "第14回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第15回",
-        "type": "テキスト",
+        "title": "第15回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "神経・生理心理学",
-        "title": "第15回",
-        "type": "映像授業",
+        "title": "第15回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "神経・生理心理学",
         "title": "試験",
-        "type": "単位認定試験",
         "deadline": "2024/07/24",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第1回",
-        "type": "映像授業",
+        "title": "第1回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第2回",
-        "type": "映像授業",
+        "title": "第2回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第3回",
-        "type": "映像授業",
+        "title": "第3回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第4回",
-        "type": "映像授業",
+        "title": "第4回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第5回",
-        "type": "映像授業",
+        "title": "第5回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第6回",
-        "type": "映像授業",
+        "title": "第6回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第7回",
-        "type": "映像授業",
+        "title": "第7回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第8回",
-        "type": "テキスト",
+        "title": "第8回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第8回",
-        "type": "映像授業",
+        "title": "第8回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第9回",
-        "type": "テキスト",
+        "title": "第9回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第9回",
-        "type": "映像授業",
+        "title": "第9回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第10回",
-        "type": "テキスト",
+        "title": "第10回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第10回",
-        "type": "映像授業",
+        "title": "第10回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第11回",
-        "type": "テキスト",
+        "title": "第11回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第11回",
-        "type": "映像授業",
+        "title": "第11回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第12回",
-        "type": "テキスト",
+        "title": "第12回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第12回",
-        "type": "映像授業",
+        "title": "第12回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第13回",
-        "type": "テキスト",
+        "title": "第13回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第13回",
-        "type": "映像授業",
+        "title": "第13回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第14回",
-        "type": "テキスト",
+        "title": "第14回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第14回",
-        "type": "映像授業",
+        "title": "第14回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第15回",
-        "type": "テキスト",
+        "title": "第15回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "心理カウンセリング序説",
-        "title": "第15回",
-        "type": "映像授業",
+        "title": "第15回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "心理カウンセリング序説",
         "title": "試験",
-        "type": "単位認定試験",
         "deadline": "2024/07/24",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第1回",
-        "type": "映像授業",
+        "title": "第1回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第2回",
-        "type": "映像授業",
+        "title": "第2回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第3回",
-        "type": "映像授業",
+        "title": "第3回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第4回",
-        "type": "映像授業",
+        "title": "第4回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第5回",
-        "type": "映像授業",
+        "title": "第5回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第6回",
-        "type": "映像授業",
+        "title": "第6回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第7回",
-        "type": "映像授業",
+        "title": "第7回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第8回",
-        "type": "テキスト",
+        "title": "第8回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第8回",
-        "type": "映像授業",
+        "title": "第8回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第9回",
-        "type": "テキスト",
+        "title": "第9回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第9回",
-        "type": "映像授業",
+        "title": "第9回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第10回",
-        "type": "テキスト",
+        "title": "第10回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第10回",
-        "type": "映像授業",
+        "title": "第10回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第11回",
-        "type": "テキスト",
+        "title": "第11回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第11回",
-        "type": "映像授業",
+        "title": "第11回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第12回",
-        "type": "テキスト",
+        "title": "第12回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第12回",
-        "type": "映像授業",
+        "title": "第12回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第13回",
-        "type": "テキスト",
+        "title": "第13回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第13回",
-        "type": "映像授業",
+        "title": "第13回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第14回",
-        "type": "テキスト",
+        "title": "第14回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第14回",
-        "type": "映像授業",
+        "title": "第14回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第15回",
-        "type": "テキスト",
+        "title": "第15回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "知的障害教育総論",
-        "title": "第15回",
-        "type": "映像授業",
+        "title": "第15回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知的障害教育総論",
         "title": "試験",
-        "type": "単位認定試験",
         "deadline": "2024/07/24",
         "estimated_time_hours": "1"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第1回",
-        "type": "映像授業",
+        "title": "第1回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第2回",
-        "type": "映像授業",
+        "title": "第2回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第3回",
-        "type": "映像授業",
+        "title": "第3回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第4回",
-        "type": "映像授業",
+        "title": "第4回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第5回",
-        "type": "映像授業",
+        "title": "第5回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第6回",
-        "type": "映像授業",
+        "title": "第6回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第7回",
-        "type": "映像授業",
+        "title": "第7回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第8回",
-        "type": "テキスト",
+        "title": "第8回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第8回",
-        "type": "映像授業",
+        "title": "第8回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第9回",
-        "type": "テキスト",
+        "title": "第9回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第9回",
-        "type": "映像授業",
+        "title": "第9回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第10回",
-        "type": "テキスト",
+        "title": "第10回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第10回",
-        "type": "映像授業",
+        "title": "第10回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第11回",
-        "type": "テキスト",
+        "title": "第11回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第11回",
-        "type": "映像授業",
+        "title": "第11回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第12回",
-        "type": "テキスト",
+        "title": "第12回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第12回",
-        "type": "映像授業",
+        "title": "第12回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第13回",
-        "type": "テキスト",
+        "title": "第13回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第13回",
-        "type": "映像授業",
+        "title": "第13回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第14回",
-        "type": "テキスト",
+        "title": "第14回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第14回",
-        "type": "映像授業",
+        "title": "第14回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第15回",
-        "type": "テキスト",
+        "title": "第15回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "特別支援教育総論",
-        "title": "第15回",
-        "type": "映像授業",
+        "title": "第15回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "特別支援教育総論",
         "title": "試験",
-        "type": "単位認定試験",
         "deadline": "2024/07/24",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第1回",
-        "type": "映像授業",
+        "title": "第1回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第2回",
-        "type": "映像授業",
+        "title": "第2回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第3回",
-        "type": "映像授業",
+        "title": "第3回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第4回",
-        "type": "映像授業",
+        "title": "第4回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第5回",
-        "type": "映像授業",
+        "title": "第5回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第6回",
-        "type": "映像授業",
+        "title": "第6回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第7回",
-        "type": "映像授業",
+        "title": "第7回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第8回",
-        "type": "テキスト",
+        "title": "第8回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第8回",
-        "type": "映像授業",
+        "title": "第8回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第9回",
-        "type": "テキスト",
+        "title": "第9回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第9回",
-        "type": "映像授業",
+        "title": "第9回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第10回",
-        "type": "テキスト",
+        "title": "第10回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第10回",
-        "type": "映像授業",
+        "title": "第10回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第11回",
-        "type": "テキスト",
+        "title": "第11回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第11回",
-        "type": "映像授業",
+        "title": "第11回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第12回",
-        "type": "テキスト",
+        "title": "第12回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第12回",
-        "type": "映像授業",
+        "title": "第12回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第13回",
-        "type": "テキスト",
+        "title": "第13回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第13回",
-        "type": "映像授業",
+        "title": "第13回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第14回",
-        "type": "テキスト",
+        "title": "第14回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第14回",
-        "type": "映像授業",
+        "title": "第14回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第15回",
-        "type": "テキスト",
+        "title": "第15回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "障害者の自立と制度",
-        "title": "第15回",
-        "type": "映像授業",
+        "title": "第15回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "障害者の自立と制度",
         "title": "試験",
-        "type": "単位認定試験",
         "deadline": "2024/07/24",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第1回",
-        "type": "映像授業",
+        "title": "第1回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第2回",
-        "type": "映像授業",
+        "title": "第2回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第3回",
-        "type": "映像授業",
+        "title": "第3回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第4回",
-        "type": "映像授業",
+        "title": "第4回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第5回",
-        "type": "映像授業",
+        "title": "第5回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第6回",
-        "type": "映像授業",
+        "title": "第6回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第7回",
-        "type": "映像授業",
+        "title": "第7回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第8回",
-        "type": "テキスト",
+        "title": "第8回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第8回",
-        "type": "映像授業",
+        "title": "第8回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第9回",
-        "type": "テキスト",
+        "title": "第9回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第9回",
-        "type": "映像授業",
+        "title": "第9回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第10回",
-        "type": "テキスト",
+        "title": "第10回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第10回",
-        "type": "映像授業",
+        "title": "第10回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第11回",
-        "type": "テキスト",
+        "title": "第11回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第11回",
-        "type": "映像授業",
+        "title": "第11回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第12回",
-        "type": "テキスト",
+        "title": "第12回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第12回",
-        "type": "映像授業",
+        "title": "第12回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第13回",
-        "type": "テキスト",
+        "title": "第13回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第13回",
-        "type": "映像授業",
+        "title": "第13回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第14回",
-        "type": "テキスト",
+        "title": "第14回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第14回",
-        "type": "映像授業",
+        "title": "第14回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第15回",
-        "type": "テキスト",
+        "title": "第15回(テキスト)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "2"
     },
     {
         "subject": "知覚・認知心理学",
-        "title": "第15回",
-        "type": "映像授業",
+        "title": "第15回(映像授業)",
         "deadline": "2025/07/15",
         "estimated_time_hours": "1"
     },
     {
         "subject": "知覚・認知心理学",
         "title": "試験",
-        "type": "単位認定試験",
         "deadline": "2024/07/24",
         "estimated_time_hours": "1"
     }
