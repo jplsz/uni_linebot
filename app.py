@@ -1,48 +1,57 @@
-from flask import Flask, request, abort
-from linebot import LineBotApi, WebhookHandler
-from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent, TextMessage, TextSendMessage
+from flask import Flask, request
+from linebot import LineBotApi
+import json
+from datetime import datetime
 import os
-from dotenv import load_dotenv
 
-# .envファイルの読み込み
-load_dotenv()
-
-# 環境変数からLINEのトークンを取得
-LINE_CHANNEL_SECRET = os.getenv("LINE_CHANNEL_SECRET")
-LINE_CHANNEL_ACCESS_TOKEN = os.getenv("LINE_CHANNEL_ACCESS_TOKEN")
-
-# Flaskアプリ作成
 app = Flask(__name__)
 
-#LINE API用のインスタンス作成
+# LINE Botの設定（トークンは環境変数または直接記述でも可）
+LINE_CHANNEL_ACCESS_TOKEN = os.getenv("LINE_CHANNEL_ACCESS_TOKEN", "YOUR_ACCESS_TOKEN")
 line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
-handler = WebhookHandler(LINE_CHANNEL_SECRET)
 
-@app.route("/callback", methods=['POST'])
-def callback():
-    # LINEからの署名検証
-    signature = request.headers['X-Line-Signature']
-    body = request.get_data(as_text=True)
+# ユーザーID（Push先：自分のID）
+USER_ID = "YOUR_USER_ID" # ←自分のLINE ID
 
-    try:
-        handler.handle(body, signature)
-    except InvalidSignatureError:
-        abort(400)
+# タスクの読み込み
+def load_tasks():
+    with open("tasks.json", "r", encoding="utf-8") as f:
+        return json.load(f)
+    
+# 今日のクエストを抽出
+def get_todays_quests(task_list, max_tasks=3):
+    today = datetime.now().date()
+    upcoming_tasks = []
 
-    return 'OK'
+    for task in task_list:
+        try:
+            deadline = datetime.strptime(task["deadline"], "%Y-%m-%d").date()
+            days_left = (deadline - today).days
+            if days_left >= 0:
+                upcoming_tasks.append((days_left, task))
+        except Exception as e:
+            continue
 
-# メッセージを受け取ったときの処理
-@handler.add(MessageEvent, message=TextMessage)
-def handle_message(event):
-    user_message = event.message.text
-    reply_text = f"受け取りました: 「{user_message}」"
+    upcoming_tasks.sort(key=lambda x: x[0])
+    return [t[1] for t in upcoming_tasks[:max_tasks]]
 
-    #応答メッセージを返す
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=reply_text)
+# Push通知を送るためのエンドポイント（Render上で手動アクセス or スケジューラー用）
+@app.route("/push_daily_quests", methods=["GET"])
+def push_daily_quests():
+    tasks = load_tasks()
+    quests = get_todays_quests(tasks)
+
+    if not quests:
+        message = "🎯 今日のクエストはありません！ゆっくり休もう✨️"
+    else:
+        message = "📅 今日のクエストはこちら！\n\n"
+        for q in quests:
+            message += f"📘 {q['subject']} | {q['title']} (締切：{q['deadline']})\n"
+
+    # LINEにPush送信
+    line_bot_api.push_message(
+        USER_ID,
+        TextSendMessage(text=message)
     )
 
-if __name__ == "__main__":
-    app.run()
+    return 'OK', 200
