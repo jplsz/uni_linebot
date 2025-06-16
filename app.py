@@ -1,5 +1,6 @@
 from flask import Flask, request
 from linebot import LineBotApi
+from linebot.models import TextSendMessage
 import json
 from datetime import datetime
 import os
@@ -11,7 +12,7 @@ LINE_CHANNEL_ACCESS_TOKEN = os.getenv("LINE_CHANNEL_ACCESS_TOKEN", "YOUR_ACCESS_
 line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
 
 # ユーザーID（Push先：自分のID）
-USER_ID = "YOUR_USER_ID" # ←自分のLINE ID
+USER_ID = "U7f366710ac3959bbaa4041a5c6a2dc5c" # ←自分のLINE ID
 
 # タスクの読み込み
 def load_tasks():
