@@ -5,8 +5,10 @@ import json
 from datetime import datetime
 import os
 import gspread
+import re
 from oauth2client.service_account import ServiceAccountCredentials
 from io import StringIO
+
 
 app = Flask(__name__)
 
@@ -102,7 +104,7 @@ def record_task_completion(subject, title):
         # 重複チェック（同じ日付・科目・タイトルが既にあるか）
         records = sheet.get_all_records()
         for row in records:
-            if row["Date"] == today and row["Subject"] == subject and row["Title"] == title:
+            if row["Date"].strip() == today and row["Subject"].strip() == subject and row["Title"].strip == title:
                 return False # 重複
         # 新規行の追加
         sheet.append_row([today, subject, title, timestamp])
@@ -146,10 +148,15 @@ def callback():
         abort(400)
 
     return "OK"
+def clean_text(text):
+    # 制御文字を除去
+    text = re.sub(r'[\x00-\x1F\x7F]', '', text)
+    return text.strip()
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    text = event.message.text.strip()
+    raw_text = event.message.text
+    text = clean_text(raw_text)
 
     if text.startswith("✅️"):
         # 例：✅️福祉心理学:第1回(映像授業)
@@ -167,7 +174,7 @@ def handle_message(event):
         except Exception as e:
             reply = "❌️ 記録形式が正しくありません。\n例：✅️福祉心理学：第3回(映像授業)"
     else:
-        reply = "📩 クエスト達成を記録したい場合は\n✅️心理学A：第3回(映像授業) のように送ってください！"
+        reply = "📩 クエスト達成を記録したい場合は\n✅️福祉心理学：第3回(映像授業) のように送ってください！"
 
     line_bot_api.reply_message(
         event.reply_token,
