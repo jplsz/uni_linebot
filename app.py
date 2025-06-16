@@ -4,6 +4,8 @@ from linebot.models import MessageEvent, TextMessage, TextSendMessage
 import json
 from datetime import datetime
 import os
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
 
 app = Flask(__name__)
 
@@ -37,35 +39,65 @@ def get_todays_quests(task_list, max_tasks=3):
     upcoming_tasks.sort(key=lambda x: x[0])
     return [t[1] for t in upcoming_tasks[:max_tasks]]
 
-# === 達成記録の保存処理 ===
-def record_task_completion(subject, title):
+# # === 達成記録の保存処理 ===
+# def record_task_completion(subject, title):
+#     today = datetime.now().strftime("%Y-%m-%d")
+#     done_file = "done_log.json"
+
+#     # ログファイルが存在しなければ初期化
+#     if not os.path.exists(done_file):
+#         done_log = {}
+#     else:
+#         with open(done_file, "r", encoding="utf-8") as f:
+#             done_log = json.load(f)
+
+#     # 新規日付なら初期化
+#     if today not in done_log:
+#         done_log[today] = []
+
+#     # 重複防止
+#     if not any(t["subject"] == subject and t["title"] == title for t in done_log[today]):
+#         done_log[today].append({
+#             "subject": subject,
+#             "title": title,
+#             "completed_at": datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+#         })
+
+#         with open(done_file, "w", encoding="utf-8") as f:
+#             json.dump(done_log, f, indent=2, ensure_ascii=False)
+#         return True # 成功
+#     else:
+#         return False # 既に記録済み
+
+# Google Sheets接続設定
+def get_sheet():
+    scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+    creds = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scope)
+    client = gspread.authorize(creds)
+
+    # スプレッドシートの名前を指定
+    sheet = client.open("UniQuest達成記録").sheet1
+    return sheet
+
+# 達成記録をGoogle Sheetsに保存
+def record_task_completion(subject, title)
     today = datetime.now().strftime("%Y-%m-%d")
-    done_file = "done_log.json"
+    timestamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
 
-    # ログファイルが存在しなければ初期化
-    if not os.path.exists(done_file):
-        done_log = {}
-    else:
-        with open(done_file, "r", encoding="utf-8") as f:
-            done_log = json.load(f)
+    try:
+        sheet = get_sheet()
 
-    # 新規日付なら初期化
-    if today not in done_log:
-        done_log[today] = []
-
-    # 重複防止
-    if not any(t["subject"] == subject and t["title"] == title for t in done_log[today]):
-        done_log[today].append({
-            "subject": subject,
-            "title": title,
-            "completed_at": datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
-        })
-
-        with open(done_file, "w", encoding="utf-8") as f:
-            json.dump(done_log, f, indent=2, ensure_ascii=False)
-        return True # 成功
-    else:
-        return False # 既に記録済み
+        # 重複チェック（同じ日付・科目・タイトルが既にあるか）
+        records = sheet.get_all_records()
+        for row in records:
+            if row["Date"] == today and row["Subject"] == subject and row["Title"] == title:
+                return False # 重複
+        # 新規行の追加
+        sheet.append_row([today, subject, title, timestamp])
+        return True
+    except Exception as e:
+        print(f"❌️ Google Sheetsへの書き込み失敗: {e}")
+        return False
 
 # Push通知を送るためのエンドポイント（Render上で手動アクセス or スケジューラー用）
 @app.route("/push_daily_quests", methods=["GET"])
