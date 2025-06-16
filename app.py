@@ -92,7 +92,7 @@ def get_sheet():
     return sheet
 
 # 達成記録をGoogle Sheetsに保存
-def record_task_completion(subject, title)
+def record_task_completion(subject, title):
     today = datetime.now().strftime("%Y-%m-%d")
     timestamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
 
