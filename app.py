@@ -6,6 +6,7 @@ from datetime import datetime
 import os
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+from io import StringIO
 
 app = Flask(__name__)
 
@@ -72,7 +73,18 @@ def get_todays_quests(task_list, max_tasks=3):
 # Google Sheets接続設定
 def get_sheet():
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scope)
+
+    # Renderの環境変数から秘密鍵を読み込む
+    raw_cred = os.environ.get("GOOGLE_CREDENTIALS_JSON")
+
+    if raw_cred is None:
+        raise Exception("GOOGLE_CREDENTIALS_JSON is not set")
+
+    # エスケープされた改行を元に戻す
+    fixed_json = raw_cred.replace("\\n", "\n")
+    creds_dict = json.loads(fixed_json)
+
+    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
     client = gspread.authorize(creds)
 
     # スプレッドシートの名前を指定
