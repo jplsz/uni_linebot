@@ -83,8 +83,10 @@ def get_sheet():
         raise Exception("GOOGLE_CREDENTIALS_JSON is not set")
 
     # エスケープされた改行を元に戻す
-    fixed_json = raw_cred.replace("\\n", "\n")
-    creds_dict = json.loads(fixed_json)
+    # fixed_json = raw_cred.replace("\\n", "\n")
+    # creds_dict = json.loads(fixed_json)
+
+    creds_dict = json.loads(raw_cred)
 
     creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
     client = gspread.authorize(creds)
