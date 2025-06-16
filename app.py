@@ -54,4 +54,4 @@ def push_daily_quests():
         TextSendMessage(text=message)
     )
 
-    return 'OK', 200
+    return "OK", 200
