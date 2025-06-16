@@ -40,7 +40,7 @@ def handle_message(event):
 
     #応答メッセージを返す
     line_bot_api.reply_message(
-        event.reply.token,
+        event.reply_token,
         TextSendMessage(text=reply_text)
     )
 
