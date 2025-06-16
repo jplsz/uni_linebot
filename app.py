@@ -38,7 +38,7 @@ def get_todays_quests(task_list, max_tasks=3):
     return [t[1] for t in upcoming_tasks[:max_tasks]]
 
 # === 達成記録の保存処理 ===
-def record_task_completion(subject, title):
+def record_task_completion(subject, title, task_type):
     today = datetime.now().strftime("%Y-%m-%d")
     done_file = "done_log.json"
 
@@ -58,6 +58,7 @@ def record_task_completion(subject, title):
         done_log[today].append({
             "subject": subject,
             "title": title,
+            "type": task_type,
             "completed_at": datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
         })
 
@@ -107,20 +108,35 @@ def callback():
 def handle_message(event):
     text = event.message.text.strip()
 
-    if text.startswith("☑️"):
-        # 例：☑️心理学A：第3回 講義視聴
+    if text.startswith("✅️"):
+        # 例：✅️福祉心理学:第1回-映像授業
         try:
             rest = text[1:].strip()
-            subject, title = rest.split(":", 1)
-            success = record_task_completion(subject.strip(), title.strip())
-            if success:
-                reply = f"📝 記録しました！\n{subject.strip()} : {title.strip()}"
+            subject, title = rest.split("：", 1)
+            subject = subject.strip()
+            title = title.strip()
+
+            # tasks.jsonから該当のtypeを探す
+            tasks = load_tasks()
+            matched_task = next(
+                (t for t in tasks if t["subject"] == subject and t["title"] == title),
+                None
+            )
+
+            if matched_task:
+                task_type = matched_task.get("type", "")
+                success = record_task_completion(subject, title, task_type)
+                if success:
+                    reply = f"📝 記録しました！\n✅️{subject}：{title}-{task_type}"
+                else:
+                    reply = "⚠️ すでに記録済みです。"
             else:
-                reply = "⚠️ すでに記録済みです。"
+                reply = "❌️ 該当タスクが見つかりません。"
+
         except Exception as e:
-            reply = "❌️ 記録形式が正しくありません。\n例：☑️福祉心理学：第3回"
+            reply = "❌️ 記録形式が正しくありません。\n例：✅️福祉心理学：第3回-映像授業"
     else:
-        reply = "📩 クエスト達成を記録したい場合は\n☑️心理学A：第3回 のように送ってください！"
+        reply = "📩 クエスト達成を記録したい場合は\n✅️心理学A：第3回-映像授業 のように送ってください！"
 
     line_bot_api.reply_message(
         event.reply_token,
