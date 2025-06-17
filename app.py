@@ -9,6 +9,7 @@ import re
 import random
 from oauth2client.service_account import ServiceAccountCredentials
 from io import StringIO
+from weekly_report import fetch_weekly_summary
 
 
 app = Flask(__name__)
