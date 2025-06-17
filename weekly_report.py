@@ -99,13 +99,13 @@ def create_weekly_report_message(summary_data, summary_comment):
 
 def record_weekly_report(summary_data, comment):
     row = [
-        summary_data.get('Date'),
-        summary_data.get('Week'),
-        summary_data.get('Ideal'),
-        summary_data.get('Actual'),
-        summary_data.get('Percent'),
-        summary_data.get('Average'),
-        summary_data.get('Emotion'),
+        summary_data.get("Date"),
+        summary_data.get("Week"),
+        summary_data.get("Ideal"),
+        summary_data.get("Actual"),
+        summary_data.get("Percent"),
+        summary_data.get("Average"),
+        summary_data.get("Emotion"),
         comment
     ]
     append_row_to_sheet('週次レポート', row)
