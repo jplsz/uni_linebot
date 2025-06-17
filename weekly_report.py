@@ -108,4 +108,5 @@ def record_weekly_report(summary_data, comment):
         summary_data.get("Emotion"),
         comment
     ]
+    print(summary_data)
     append_row_to_sheet("週次レポート", row)
