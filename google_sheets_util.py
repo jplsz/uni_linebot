@@ -24,3 +24,7 @@ def get_sheet():
 def get_emotion_sheet():
     client = get_gspread_client()
     return client.open("UniQuest_DB").worksheet("感情ログ")
+
+def get_weekly_sheet():
+    client = get_gspread_client()
+    return client.open("UniQuest_DB").worksheet("週次レポート")

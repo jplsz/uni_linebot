@@ -9,7 +9,8 @@ import re
 import random
 from oauth2client.service_account import ServiceAccountCredentials
 from io import StringIO
-from weekly_report import fetch_weekly_summary, generate_summary_comment, create_weekly_report_message
+from weekly_report import fetch_weekly_summary, generate_summary_comment, create_weekly_report_message, get_week_range
+from google_sheets_util import get_sheet, get_emotion_sheet, get_weekly_sheet
 
 
 app = Flask(__name__)
@@ -104,7 +105,7 @@ def get_todays_quests(task_list, max_tasks=3):
 #         return False # 既に記録済み
 
 # Googleシート用の共通関数
-def get_gspread_client():
+# def get_gspread_client():
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
     raw_cred = os.environ.get("GOOGLE_CREDENTIALS_JSON")
 
@@ -116,14 +117,14 @@ def get_gspread_client():
     return gspread.authorize(creds)
 
 # Google Sheets接続設定
-def get_sheet():
-    # スプレッドシートの名前を指定
-    client = get_gspread_client()
-    return client.open("UniQuest_DB").worksheet("達成記録")
+# def get_sheet():
+#     # スプレッドシートの名前を指定
+#     client = get_gspread_client()
+#     return client.open("UniQuest_DB").worksheet("達成記録")
 
-def get_emotion_sheet():
-    client = get_gspread_client()
-    return client.open("UniQuest_DB").worksheet("感情ログ")
+# def get_emotion_sheet():
+#     client = get_gspread_client()
+#     return client.open("UniQuest_DB").worksheet("感情ログ")
 
 # 達成記録をGoogle Sheetsに保存
 def record_task_completion(subject, title):
@@ -145,11 +146,18 @@ def record_task_completion(subject, title):
         print(f"❌️ Google Sheetsへの書き込み失敗: {e}")
         return False
 
-# 感情ログを記録
+# 感情ログを保存
 def record_emotion_log(emoji, focus, comment):
     sheet = get_emotion_sheet()
     today = datetime.now().strftime("%Y-%m-%d")
     sheet.append_row([today, emoji, focus, comment])
+    return True
+
+# 週次レポートを保存
+def record_weekly_report(Ideal, Actual, Percent, Average, Emotion, Summary, Suggestions):
+    sheet = get_weekly_sheet()
+    week = get_week_range()
+    sheet.append_row([week, Ideal, Actual, Percent, Average, Emotion, Summary, Suggestions])
     return True
 
 # 達成済みタスクの取得関数
