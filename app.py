@@ -26,6 +26,16 @@ def load_tasks():
     with open("tasks.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
+# 日付の形式に対応
+def parse_deadline(date_str):
+    """ハイフン・スラッシュどちらの形式にも対応"""
+    for fmt in ("%Y-%m-%d", "%Y/%m/%d"):
+        try:
+            return datetime.strptime(date_str, fmt).date()
+        except ValueError:
+            continue
+    raise ValueError(f"Unsupported date format: {date_str}")
+
 # 「第◯回」の抽出
 def extract_lesson_number(title):
     """タイトルから「第◯回」の数字を抽出"""
@@ -41,7 +51,7 @@ def get_todays_quests(task_list, max_tasks=3):
     filtered = []
     for task in task_list:
         try:
-            deadline = datetime.strptime(task["deadline"], "%Y-%m-%d").date()
+            deadline = parse_deadline(task["deadline"])
             if deadline >= today and (task["subject"], task["title"]) not in completed:
                 filtered.append(task)
         except Exception as e:
