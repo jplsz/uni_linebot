@@ -99,14 +99,14 @@ def create_weekly_report_message(summary_data, summary_comment):
 
 def record_weekly_report(summary_data, comment):
     row = [
-        summary_data.get("Date"),
-        summary_data.get("Week"),
-        summary_data.get("Ideal"),
-        summary_data.get("Actual"),
-        summary_data.get("Percent"),
-        summary_data.get("Average"),
-        summary_data.get("Emotion"),
+        summary_data.get('日付'),
+        summary_data.get('週'),
+        summary_data.get('理想達成数'),
+        summary_data.get('実達成数'),
+        summary_data.get('達成率'),
+        summary_data.get('平均集中度'),
+        summary_data.get('感情傾向'),
         comment
     ]
     print(summary_data)
-    append_row_to_sheet("週次レポート", row)
+    append_row_to_sheet('週次レポート', row)
