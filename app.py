@@ -170,7 +170,7 @@ def push_daily_quests():
         message = "📅 今日のクエストはこちら！\n\n"
         for q in quests:
             message += (
-                f"📘 {q['subject']}：{q['title']}{q['type']}\n"
+                f"📘 {q['subject']}：{q['title']}\n"
                 f"🗓️ 締切：{q['deadline']}\n\n"
             )
 
