@@ -75,7 +75,7 @@ def generate_summary_comment(summary_data):
 
     response = client.chat.completions.create(
         model = "gpt-4o",
-        messages=[
+        messages = [
             {"role": "system", "content": "あなたは学習支援アシスタントです。。"},
             {"role": "user", "content": "一週間の活動をまとめてください。"}
         ],
