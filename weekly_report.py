@@ -34,7 +34,7 @@ def fetch_weekly_summary():
     emotion_records = emotion_sheet.get_all_records()
     weekly_emotions = [
         row for row in emotion_records
-        if start_date <= datetime.strptime(row["日付"], "%Y-%m-%d").date()
+        if start_date <= datetime.strptime(row["Date"], "%Y-%m-%d").date()
     ]
 
     # 平均集中度・感情傾向
