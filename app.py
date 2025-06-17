@@ -6,6 +6,7 @@ from datetime import datetime
 import os
 import gspread
 import re
+import random
 from oauth2client.service_account import ServiceAccountCredentials
 from io import StringIO
 
@@ -25,22 +26,41 @@ def load_tasks():
     with open("tasks.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
+# 「第◯回」の抽出
+def extract_lesson_number(title):
+    """タイトルから「第◯回」の数字を抽出"""
+    match = re.search(r"第(\d+)回", title)
+    return int(match.group(1)) if match else 9999 #該当なしは後回し
+
 # 今日のクエストを抽出
 def get_todays_quests(task_list, max_tasks=3):
     today = datetime.now().date()
-    upcoming_tasks = []
+    completed = get_completed_tasks()
 
+    # 未達成かつ締切が今日以降のタスクを抽出
+    filtered = []
     for task in task_list:
         try:
             deadline = datetime.strptime(task["deadline"], "%Y-%m-%d").date()
-            days_left = (deadline - today).days
-            if days_left >= 0:
-                upcoming_tasks.append((days_left, task))
+            if deadline >= today and (task["subject"], task["title"]) not in completed:
+                filtered.append(task)
         except Exception as e:
+            print(f"❌️ タスクフィルタ中エラー: {e}")
             continue
 
-    upcoming_tasks.sort(key=lambda x: x[0])
-    return [t[1] for t in upcoming_tasks[:max_tasks]]
+    # 各科目ごとに最も若い回をピックアップ
+    subject_to_tasks = {}
+    for task in filtered:
+        subject = task["subject"]
+        current = subject_to_tasks.get(subject)
+
+        if current is None or extract_lesson_number(task["title"]) < extract_lesson_number(current["title"]):
+            subject_to_tasks[subject] = task
+
+    # ピックアップされたものをランダムに並べ、上から3件
+    selected = list(subject_to_tasks.values())
+    random.shuffle(selected)
+    return selected[:max_tasks]
 
 # # === 達成記録の保存処理 ===
 # def record_task_completion(subject, title):
@@ -114,6 +134,19 @@ def record_task_completion(subject, title):
     except Exception as e:
         print(f"❌️ Google Sheetsへの書き込み失敗: {e}")
         return False
+
+# 達成済みタスクの取得関数
+def get_completed_tasks():
+    try:
+        sheet = get_sheet()
+        records = sheet.get_all_records()
+        completed = set()
+        for row in records:
+            completed.add((row["Subject"], row["Title"]))
+        return completed
+    except Exception as e:
+        print(f"❌️ 達成済みタスクの取得失敗: {e}")
+        return set()
 
 # Push通知を送るためのエンドポイント（Render上で手動アクセス or スケジューラー用）
 @app.route("/push_daily_quests", methods=["GET"])
