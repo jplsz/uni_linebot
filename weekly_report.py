@@ -73,13 +73,14 @@ def generate_summary_comment(summary_data):
         f"このデータをもとに、学生に向けてポジティブで具体的な振り返りコメントを100文字以内で書いてください。"
     )
 
-    response = client.chat.completions.create(model = "gpt-4",
-    messages=[
-        {"role": "system", "content": "あなたは優しく前向きな学習コーチです。"},
-        {"role": "user", "content": prompt}
-    ],
-    temperature=0.7)
-
+    response = client.chat.completions.create(
+        model = "gpt-4",
+        messages=[
+            {"role": "system", "content": "あなたは学習支援アシスタントです。。"},
+            {"role": "user", "content": "一週間の活動をまとめてください。"}
+        ],
+    )
+    print(response.choices[0],message.content)
     return response.choices[0].message.content.strip()
 
 def create_weekly_report_message(summary_data, summary_comment):
