@@ -262,7 +262,9 @@ def handle_message(event):
                 record_emotion_log(emoji, focus, comment)
                 reply = f"🧠 感情ログを記録しました！\n{emoji} 集中{focus}\nコメント：{comment or 'なし'}"
             else:
-                reply = "❌ 感情ログの記録中にエラーが発生しました。"
+                reply = "⚠️ 書式が正しくありません。\n例）🧠 感情ログ：🙂 集中70% コメント：今日はまあまあ集中できた"
+        except Exception as e:
+            reply = "❌ 感情ログの記録中にエラーが発生しました。"
     else:
         reply = "📩 クエスト達成を記録したい場合は\n✅️福祉心理学：第3回(映像授業) のように送ってください！"
 
