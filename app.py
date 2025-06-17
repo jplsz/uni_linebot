@@ -102,28 +102,27 @@ def get_todays_quests(task_list, max_tasks=3):
 #     else:
 #         return False # 既に記録済み
 
-# Google Sheets接続設定
-def get_sheet():
+# Googleシート用の共通関数
+def get_gspread_client():
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-
-    # Renderの環境変数から秘密鍵を読み込む
     raw_cred = os.environ.get("GOOGLE_CREDENTIALS_JSON")
 
     if raw_cred is None:
         raise Exception("GOOGLE_CREDENTIALS_JSON is not set")
 
-    # エスケープされた改行を元に戻す
-    # fixed_json = raw_cred.replace("\\n", "\n")
-    # creds_dict = json.loads(fixed_json)
-
     creds_dict = json.loads(raw_cred)
-
     creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
-    client = gspread.authorize(creds)
+    return gspread.authorize(creds)
 
+# Google Sheets接続設定
+def get_sheet():
     # スプレッドシートの名前を指定
-    sheet = client.open("UniQuest_DB").worksheet("達成記録")
-    return sheet
+    client = get_gspread_client
+    return client.open("UniQuest_DB").worksheet("達成記録")
+
+def get_emotion_sheet():
+    client = get_gspread_client()
+    return client.open("UniQuest_DB").worksheet("感情ログ")
 
 # 達成記録をGoogle Sheetsに保存
 def record_task_completion(subject, title):
@@ -147,7 +146,7 @@ def record_task_completion(subject, title):
 
 # 感情ログを記録
 def record_emotion_log(emoji, focus, comment):
-    sheet = client.open("UniQuest_DB").worksheet("感情ログ")
+    sheet = get_emotion_sheet()
     today = datetime.datetime.now().strftime("%Y-%m-%d")
     sheet.append_row([today, emoji, focus, comment])
     return True
