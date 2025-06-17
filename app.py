@@ -147,7 +147,7 @@ def record_task_completion(subject, title):
 # 感情ログを記録
 def record_emotion_log(emoji, focus, comment):
     sheet = get_emotion_sheet()
-    today = datetime.datetime.now().strftime("%Y-%m-%d")
+    today = datetime.now().strftime("%Y-%m-%d")
     sheet.append_row([today, emoji, focus, comment])
     return True
 
@@ -263,6 +263,7 @@ def handle_message(event):
             else:
                 reply = "⚠️ 書式が正しくありません。\n例）🧠 感情ログ：🙂 集中70% コメント：今日はまあまあ集中できた"
         except Exception as e:
+            print(f"❌ 感情ログの記録中にエラー: {e}")
             reply = "❌ 感情ログの記録中にエラーが発生しました。"
     else:
         reply = "📩 クエスト達成を記録したい場合は\n✅️福祉心理学：第3回(映像授業) のように送ってください！"
