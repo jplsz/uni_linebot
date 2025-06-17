@@ -215,6 +215,14 @@ def push_daily_emotion_log():
 
     return "OK", 200
 
+@app.route("/weekly_report", methods=["GET"])
+def trigger_weekly_report():
+    try:
+        send_weekly_report()
+        return "✅️ Weekly report sent", 200
+    except Exception as e:
+        return f"❌️ Error: {str(e)}", 500
+
 @app.route("/callback", methods=["POST"])
 def callback():
     signature = request.headers["X-Line-Signature"]
@@ -264,6 +272,12 @@ def handle_message(event):
                 f"📘 {q['subject']}：{q['title']}\n"
                 f"🗓️ 締切：{q['deadline']}\n\n"
                 )
+    elif text == "週次レポート":
+        try:
+            send_weekly_report()
+            reply = "📊 週次レポートを送信しました！"
+        except Exception as e:
+            reply = f"❌️ エラー：{str(e)}"
     elif text.startswith("🧠 感情ログ："):
         try:
             match = re.match(r"🧠 感情ログ：(.+?) 集中(\d+%) コメント：(.*)", text)
