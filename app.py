@@ -9,7 +9,7 @@ import re
 import random
 from oauth2client.service_account import ServiceAccountCredentials
 from io import StringIO
-from weekly_report import fetch_weekly_summary
+from weekly_report import fetch_weekly_summary, generate_summary_comment, create_weekly_report_message
 
 
 app = Flask(__name__)
@@ -164,6 +164,18 @@ def get_completed_tasks():
     except Exception as e:
         print(f"❌️ 達成済みタスクの取得失敗: {e}")
         return set()
+
+# 週次レポート
+def send_weekly_report():
+    try:
+        summary = fetch_weekly_summary()
+        comment = generate_summary_comment(summary)
+        message = create_weekly_report_message(summary, comment)
+
+        line_bot_api.push_message(USER_ID, TextSendMessage(text=message))
+        print("✅️ 週次レポートを送信しました。")
+    except Exception as e:
+        print("❌️ 週次レポート送信に失敗：", e)
 
 # Push通知を送るためのエンドポイント（Render上で手動アクセス or スケジューラー用）
 @app.route("/push_daily_quests", methods=["GET"])

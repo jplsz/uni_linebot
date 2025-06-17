@@ -59,7 +59,7 @@ def fetch_weekly_summary():
         "感情傾向": top_emoji
     }
 
-def generate_summary_comment(summary_data)
+def generate_summary_comment(summary_data):
     prompt = (
         f"以下は、ある学生の1週間の学習活動のサマリーです：\n"
         f"- 週の期間：{summary_data['週']}\n"
@@ -81,3 +81,16 @@ def generate_summary_comment(summary_data)
     )
 
     return response.choices[0].message["content"].strip()
+
+def create_weekly_report_message(summary_data, summary_comment):
+    message = (
+        f"📊 【今週のUniQuestレポート】\n\n"
+        f"🎯 クエスト達成まとめ（{summary_data['週']}）\n"
+        f"合計達成数：{summary_data['実達成数']}件（理想値：{summary_data['理想達成数']}件）\n"
+        f"達成率：{summary_data['達成率']}\n\n"
+        f"🧠 今週の気分と集中度\n"
+        f"平均集中度：{summary_data['平均集中度']}\n"
+        f"感情傾向：{summary_data['感情傾向']}\n\n"
+        f"🤖 総括コメント：\n{summary_comment}\n\n"
+    )
+    return message
