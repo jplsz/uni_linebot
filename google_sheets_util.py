@@ -25,6 +25,6 @@ def get_emotion_sheet():
     client = get_gspread_client()
     return client.open("UniQuest_DB").worksheet("感情ログ")
 
-def get_weekly_sheet():
-    client = get_gspread_client()
-    return client.open("UniQuest_DB").worksheet("週次レポート")
+def append_row_to_sheet(sheet_name, row_values):
+    sheet = get_sheet(sheet_name)
+    sheet.append_row(row_values)

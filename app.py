@@ -9,8 +9,8 @@ import re
 import random
 from oauth2client.service_account import ServiceAccountCredentials
 from io import StringIO
-from weekly_report import fetch_weekly_summary, generate_summary_comment, create_weekly_report_message, get_week_range
-from google_sheets_util import get_sheet, get_emotion_sheet, get_weekly_sheet
+from weekly_report import fetch_weekly_summary, generate_summary_comment, create_weekly_report_message, get_week_range, record_weekly_report
+from google_sheets_util import get_sheet, get_emotion_sheet
 
 
 app = Flask(__name__)
@@ -153,13 +153,6 @@ def record_emotion_log(emoji, focus, comment):
     sheet.append_row([today, emoji, focus, comment])
     return True
 
-# 週次レポートを保存
-def record_weekly_report(Ideal, Actual, Percent, Average, Emotion, Summary, Suggestions):
-    sheet = get_weekly_sheet()
-    week = get_week_range()
-    sheet.append_row([week, Ideal, Actual, Percent, Average, Emotion, Summary, Suggestions])
-    return True
-
 # 達成済みタスクの取得関数
 def get_completed_tasks():
     try:
@@ -180,6 +173,7 @@ def send_weekly_report():
         comment = generate_summary_comment(summary)
         message = create_weekly_report_message(summary, comment)
 
+        record_weekly_report(summary, comment)
         line_bot_api.push_message(USER_ID, TextSendMessage(text=message))
         print("✅️ 週次レポートを送信しました。")
     except Exception as e:

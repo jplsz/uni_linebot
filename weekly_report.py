@@ -1,6 +1,6 @@
 from collections import Counter
 from datetime import datetime, timedelta
-from google_sheets_util import get_sheet, get_emotion_sheet
+from google_sheets_util import get_sheet, get_emotion_sheet, append_row_to_sheet
 from openai import OpenAI
 
 client = OpenAI()
@@ -96,3 +96,16 @@ def create_weekly_report_message(summary_data, summary_comment):
         f"🤖 総括コメント：\n{summary_comment}\n\n"
     )
     return message
+
+def record_weekly_report(summary_data, comment):
+    row = [
+        summary_data.get('Date'),
+        summary_data.get('Week'),
+        summary_data.get('Ideal'),
+        summary_data.get('Actual'),
+        summary_data.get('Percent'),
+        summary_data.get('Average'),
+        summary_data.get('Emotion'),
+        comment
+    ]
+    append_row_to_sheet('週次レポート', row)
