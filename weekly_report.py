@@ -75,13 +75,14 @@ def generate_summary_comment(summary_data):
 
     response = client.chat.completions.create(
         model = "gpt-4o",
-        messages = (
+        messages = [
             {"role": "system", "content": "あなたは学習支援アシスタントです。。"},
-            {"role": "user", "content": "一週間の活動をまとめてください。"}
-        )
+            {"role": "user", "content": prompt}
+        ]
     )
-    print(response.choices[0],messages.content)
-    return response.choices[0].messages.content.strip()
+
+    print(response.choices[0].message.content)
+    return response.choices[0].message.content.strip()
 
 def create_weekly_report_message(summary_data, summary_comment):
     message = (
