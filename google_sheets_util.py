@@ -16,10 +16,10 @@ def get_gspread_client():
     return gspread.authorize(creds)
 
 # Google Sheets接続設定
-def get_sheet():
+def get_sheet(sheet_name="達成記録"):
     # スプレッドシートの名前を指定
     client = get_gspread_client()
-    return client.open("UniQuest_DB").worksheet("達成記録")
+    return client.open("UniQuest_DB").worksheet(sheet_name)
 
 def get_emotion_sheet():
     client = get_gspread_client()
