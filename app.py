@@ -122,7 +122,7 @@ def get_sheet():
     client = gspread.authorize(creds)
 
     # スプレッドシートの名前を指定
-    sheet = client.open("UniQuest達成記録").sheet1
+    sheet = client.open("UniQuest_DB").worksheet("達成記録")
     return sheet
 
 # 達成記録をGoogle Sheetsに保存
@@ -144,6 +144,13 @@ def record_task_completion(subject, title):
     except Exception as e:
         print(f"❌️ Google Sheetsへの書き込み失敗: {e}")
         return False
+
+# 感情ログを記録
+def record_emotion_log(emoji, focus, comment):
+    sheet = client.open("UniQuest_DB").worksheet("感情ログ")
+    today = datetime.datetime.now().strftime("%Y-%m-%d")
+    sheet.append_row([today, emoji, focus, comment])
+    return True
 
 # 達成済みタスクの取得関数
 def get_completed_tasks():
@@ -175,6 +182,20 @@ def push_daily_quests():
             )
 
     # LINEにPush送信
+    line_bot_api.push_message(
+        USER_ID,
+        TextSendMessage(text=message)
+    )
+
+    return "OK", 200
+
+@app.route("/push_daily_emotion_log", methods=["GET"])
+def push_daily_emotion_log():
+    message = (
+        "🧠 今日の感情はどうだった？\n"
+        "例）🧠 感情ログ：😐 集中50% コメント：あまりやる気が出なかったけど頑張った"
+    )
+
     line_bot_api.push_message(
         USER_ID,
         TextSendMessage(text=message)
@@ -231,6 +252,17 @@ def handle_message(event):
                 f"📘 {q['subject']}：{q['title']}\n"
                 f"🗓️ 締切：{q['deadline']}\n\n"
                 )
+    elif text.startswith("🧠 感情ログ："):
+        try:
+            match = re.match(r"🧠 感情ログ：(.+?) 集中(\d+%) コメント：(.*)", text)
+            if match:
+                emoji = match.group(1).strip()
+                focus = match.group(2).strip()
+                comment = match.group(3).strip()
+                record_emotion_log(emoji, focus, comment)
+                reply = f"🧠 感情ログを記録しました！\n{emoji} 集中{focus}\nコメント：{comment or 'なし'}"
+            else:
+                reply = "❌ 感情ログの記録中にエラーが発生しました。"
     else:
         reply = "📩 クエスト達成を記録したい場合は\n✅️福祉心理学：第3回(映像授業) のように送ってください！"
 
