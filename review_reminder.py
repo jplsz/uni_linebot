@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 import gspread
 from google_sheets_util import get_sheet
+from library import get_jst_date, get_jst_time
 
 # 忘却曲線のスケジュール
 REVIEW_DAYS = [1, 3, 7, 14, 30]
@@ -33,3 +34,11 @@ def get_review_targets():
             continue
 
     return targets
+
+def record_review_reminder(subject, title, stage):
+    date = get_jst_date()
+    timestamp = get_jst_time()
+    sheet = get_sheet("復習記録")
+
+    sheet.append_row([date, subject, title, stage, timestamp])
+    return True
