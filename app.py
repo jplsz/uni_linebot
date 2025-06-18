@@ -13,7 +13,7 @@ from io import StringIO
 from weekly_report import fetch_weekly_summary, generate_summary_comment, create_weekly_report_message, get_week_range, record_weekly_report
 from google_sheets_util import get_sheet, get_emotion_sheet
 from library import get_jst_date, get_jst_time, load_tasks
-from review_reminder import REVIEW_DAYS, get_review_targets
+from review_reminder import REVIEW_DAYS, get_review_targets, record_review_reminder
 
 app = Flask(__name__)
 
@@ -271,6 +271,22 @@ def handle_message(event):
         except Exception as e:
             print(f"❌ 感情ログの記録中にエラー: {e}")
             reply = "❌ 感情ログの記録中にエラーが発生しました。"
+    elif text.startswith("🔁"):
+        # 例) 🔁福祉心理学:第1回(映像授業)
+        try:
+            rest = text[1:].strip()
+            subject, title = rest.split("：", 1)
+            subject = subject.strip()
+            title = title.strip()
+            stage = stage.strip()
+
+            success = record_review_reminder(subject, title, stage)
+            if success:
+                reply = f"📝 復習を記録しました！\🔁{subject}：{title}（{stage}）"
+            else:
+                reply = "⚠️ すでに記録済みです。"
+        except Exception as e:
+            reply = "❌️ 記録形式が正しくありません。\n例🔁：福祉心理学：第3回(映像授業)"
     else:
         reply = "📩 クエスト達成を記録したい場合は\n✅️福祉心理学：第3回(映像授業) のように送ってください！"
 
