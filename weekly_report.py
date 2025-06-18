@@ -3,16 +3,10 @@ from datetime import datetime, timedelta
 from google_sheets_util import get_sheet, get_emotion_sheet, append_row_to_sheet
 from openai import OpenAI
 from zoneinfo import ZoneInfo
+from library import get_jst_date
 
 client = OpenAI()
 import os
-
-# UTCをJSTに変換(日付のみ)
-def get_jst_date():
-    jst = ZoneInfo("Asia/Tokyo")
-    aware_jst = datetime.now(jst)
-
-    return aware_jst.strftime("%Y-%m-%d")
 
 def get_week_range():
     """今週の月曜〜日曜の日付範囲を取得"""
