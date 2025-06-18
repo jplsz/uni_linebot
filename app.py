@@ -12,8 +12,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 from io import StringIO
 from weekly_report import fetch_weekly_summary, generate_summary_comment, create_weekly_report_message, get_week_range, record_weekly_report
 from google_sheets_util import get_sheet, get_emotion_sheet
-from library import get_jst_date, get_jst_time
-
+from library import get_jst_date, get_jst_time, load_tasks
 
 app = Flask(__name__)
 
@@ -24,11 +23,6 @@ handler = WebhookHandler(os.getenv("LINE_CHANNEL_SECRET", "YOUR_SECRET"))
 
 # ユーザーID（Push先：自分のID）
 USER_ID = "U7f366710ac3959bbaa4041a5c6a2dc5c" # ←自分のLINE ID
-
-# タスクの読み込み
-def load_tasks():
-    with open("tasks.json", "r", encoding="utf-8") as f:
-        return json.load(f)
 
 # 日付の形式に対応
 def parse_deadline(date_str):
