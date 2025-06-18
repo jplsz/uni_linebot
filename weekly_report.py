@@ -7,12 +7,18 @@ from zoneinfo import ZoneInfo
 client = OpenAI()
 import os
 
-def get_week_range():
-    """今週の月曜〜日曜の日付範囲を取得"""
-    today = datetime.now()
+# UTCをJSTに変換(日付のみ)
+def get_jst_date():
     jst = ZoneInfo("Asia/Tokyo")
     aware_jst = datetime.now(jst)
-    start = aware_jst - timedelta(days=aware_jst.weekday()) # 月曜日
+
+    return aware_jst.strftime("%Y-%m-%d")
+
+def get_week_range():
+    """今週の月曜〜日曜の日付範囲を取得"""
+    today = get_jst_date
+
+    start = today - timedelta(days=today.weekday()) # 月曜日
     end = start + timedelta(days=6) # 日曜日
     return start.date(), end.date()
 
