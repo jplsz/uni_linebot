@@ -281,7 +281,7 @@ def handle_message(event):
         #     # title = title.strip()
         #     stage = stage.strip()
 
-            match = re.match(r"🔁(.+?)：(.+?)（(.+?)）", text)
+            match = re.match(r"🔁(.+?)：(.+?)【(.+?)】", text)
             if match:
                 subject = match.group(1).strip()
                 title = match.group(2).strip()
