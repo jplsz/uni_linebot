@@ -13,6 +13,7 @@ from io import StringIO
 from weekly_report import fetch_weekly_summary, generate_summary_comment, create_weekly_report_message, get_week_range, record_weekly_report
 from google_sheets_util import get_sheet, get_emotion_sheet
 from library import get_jst_date, get_jst_time, load_tasks
+from review_reminder import REVIEW_DAYS, get_review_targets
 
 app = Flask(__name__)
 
@@ -69,48 +70,6 @@ def get_todays_quests(task_list, max_tasks=3):
     selected = list(subject_to_tasks.values())
     random.shuffle(selected)
     return selected[:max_tasks]
-
-# # === 達成記録の保存処理 ===
-# def record_task_completion(subject, title):
-#     today = datetime.now().strftime("%Y-%m-%d")
-#     done_file = "done_log.json"
-
-#     # ログファイルが存在しなければ初期化
-#     if not os.path.exists(done_file):
-#         done_log = {}
-#     else:
-#         with open(done_file, "r", encoding="utf-8") as f:
-#             done_log = json.load(f)
-
-#     # 新規日付なら初期化
-#     if today not in done_log:
-#         done_log[today] = []
-
-#     # 重複防止
-#     if not any(t["subject"] == subject and t["title"] == title for t in done_log[today]):
-#         done_log[today].append({
-#             "subject": subject,
-#             "title": title,
-#             "completed_at": datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
-#         })
-
-#         with open(done_file, "w", encoding="utf-8") as f:
-#             json.dump(done_log, f, indent=2, ensure_ascii=False)
-#         return True # 成功
-#     else:
-#         return False # 既に記録済み
-
-# Googleシート用の共通関数
-# def get_gspread_client():
-    scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    raw_cred = os.environ.get("GOOGLE_CREDENTIALS_JSON")
-
-    if raw_cred is None:
-        raise Exception("GOOGLE_CREDENTIALS_JSON is not set")
-
-    creds_dict = json.loads(raw_cred)
-    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
-    return gspread.authorize(creds)
 
 # 達成記録をGoogle Sheetsに保存
 def record_task_completion(subject, title):
@@ -204,13 +163,20 @@ def push_daily_emotion_log():
 
     return "OK", 200
 
-@app.route("/weekly_report", methods=["GET"])
+@app.route("/push_weekly_report", methods=["GET"])
 def trigger_weekly_report():
     try:
         send_weekly_report()
         return "✅️ Weekly report sent", 200
     except Exception as e:
         return f"❌️ Error: {str(e)}", 500
+
+@app.route("/push_review_reminder", methods=["GET"])
+def push_review_reminder():
+    if __name__ == "__main__":
+        targets = get_review_targets()
+        for t in targets:
+            print(f"🔁 復習対象: {t['subject']}：{t['title']}（{t['review_stage']}回目）")
 
 @app.route("/callback", methods=["POST"])
 def callback():
