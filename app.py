@@ -3,6 +3,7 @@ from linebot import LineBotApi, WebhookHandler
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
 import json
 from datetime import datetime
+from zoneinfo import ZoneInfo
 import os
 import gspread
 import re
@@ -129,7 +130,9 @@ def get_todays_quests(task_list, max_tasks=3):
 # 達成記録をGoogle Sheetsに保存
 def record_task_completion(subject, title):
     today = datetime.now().strftime("%Y-%m-%d")
-    timestamp = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
+    jst = ZoneInfo("Asia/Tokyo")
+    aware_jst = datetime.now(jst)
+    timestamp = aware_jst.strftime("%Y-%m-%dT%H:%M:%S")
 
     try:
         sheet = get_sheet()
