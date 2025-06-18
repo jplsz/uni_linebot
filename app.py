@@ -12,6 +12,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 from io import StringIO
 from weekly_report import fetch_weekly_summary, generate_summary_comment, create_weekly_report_message, get_week_range, record_weekly_report
 from google_sheets_util import get_sheet, get_emotion_sheet
+from library import get_jst_date, get_jst_time
 
 
 app = Flask(__name__)
@@ -116,20 +117,6 @@ def get_todays_quests(task_list, max_tasks=3):
     creds_dict = json.loads(raw_cred)
     creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
     return gspread.authorize(creds)
-
-# UTCをJSTに変換(時間)
-def get_jst_time():
-    jst = ZoneInfo("Asia/Tokyo")
-    aware_jst = datetime.now(jst)
-
-    return aware_jst.strftime("%Y-%m-%dT%H:%M:%S")
-
-# UTCをJSTに変換(日付のみ)
-def get_jst_date():
-    jst = ZoneInfo("Asia/Tokyo")
-    aware_jst = datetime.now(jst)
-
-    return aware_jst.strftime("%Y-%m-%d")
 
 # 達成記録をGoogle Sheetsに保存
 def record_task_completion(subject, title):
