@@ -177,6 +177,7 @@ def push_review_reminder():
         targets = get_review_targets()
         for t in targets:
             print(f"🔁 復習対象: {t['subject']}：{t['title']}（{t['review_stage']}回目）")
+        return "OK", 200
 
 @app.route("/callback", methods=["POST"])
 def callback():
