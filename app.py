@@ -277,8 +277,8 @@ def handle_message(event):
             rest = text[1:].strip()
             subject_title, stage = rest.split("：", 1)
             subject, title = subject_title.split("：", 1)
-            subject = subject.strip()
-            title = title.strip()
+            # subject = subject.strip()
+            # title = title.strip()
             stage = stage.strip()
 
             success = record_review_reminder(subject, title, stage)
