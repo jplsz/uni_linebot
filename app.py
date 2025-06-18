@@ -117,22 +117,16 @@ def get_todays_quests(task_list, max_tasks=3):
     creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
     return gspread.authorize(creds)
 
-# Google Sheets接続設定
-# def get_sheet():
-#     # スプレッドシートの名前を指定
-#     client = get_gspread_client()
-#     return client.open("UniQuest_DB").worksheet("達成記録")
+# UTCをJSTに変換
+def get_datetime_jst():
+    jst = ZoneInfo("Asia/Tokyo")
+    aware_jst = datetime.now(jst)
 
-# def get_emotion_sheet():
-#     client = get_gspread_client()
-#     return client.open("UniQuest_DB").worksheet("感情ログ")
+    return aware_jst.strftime("%Y-%m-%dT%H:%M:%S")
 
 # 達成記録をGoogle Sheetsに保存
 def record_task_completion(subject, title):
-    today = datetime.now().strftime("%Y-%m-%d")
-    jst = ZoneInfo("Asia/Tokyo")
-    aware_jst = datetime.now(jst)
-    timestamp = aware_jst.strftime("%Y-%m-%dT%H:%M:%S")
+    timestamp = get_datetime_jst()
 
     try:
         sheet = get_sheet()
@@ -140,10 +134,10 @@ def record_task_completion(subject, title):
         # 重複チェック（同じ日付・科目・タイトルが既にあるか）
         records = sheet.get_all_records()
         for row in records:
-            if row["Date"].strip() == today and row["Subject"].strip() == subject and row["Title"].strip == title:
+            if row["Date"].strip() == timestamp and row["Subject"].strip() == subject and row["Title"].strip == title:
                 return False # 重複
         # 新規行の追加
-        sheet.append_row([today, subject, title, timestamp])
+        sheet.append_row([timestamp, subject, title, timestamp])
         return True
     except Exception as e:
         print(f"❌️ Google Sheetsへの書き込み失敗: {e}")
