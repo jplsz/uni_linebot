@@ -275,18 +275,19 @@ def handle_message(event):
         # 例) 🔁福祉心理学:第1回(映像授業)
         try:
             rest = text[1:].strip()
-            subject, title = rest.split("：", 1)
+            subject_title, stage = rest.split("：", 1)
+            subject, title = subject_title.split("：", 1)
             subject = subject.strip()
             title = title.strip()
             stage = stage.strip()
 
             success = record_review_reminder(subject, title, stage)
             if success:
-                reply = f"📝 復習を記録しました！\🔁{subject}：{title}（{stage}）"
+                reply = f"📝 復習を記録しました！🔁{subject}：{title}（{stage}）"
             else:
                 reply = "⚠️ すでに記録済みです。"
         except Exception as e:
-            reply = "❌️ 記録形式が正しくありません。\n例🔁：福祉心理学：第3回(映像授業)"
+            reply = "❌️ 記録形式が正しくありません。\n例：🔁福祉心理学：第3回(映像授業)（3回目）"
     else:
         reply = "📩 クエスト達成を記録したい場合は\n✅️福祉心理学：第3回(映像授業) のように送ってください！"
 
