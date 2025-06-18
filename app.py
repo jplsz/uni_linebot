@@ -125,6 +125,29 @@ def send_weekly_report():
     except Exception as e:
         print("❌️ 週次レポート送信に失敗：", e)
 
+# 復習リマインド
+def send_review_push():
+    review_targets = get_review_targets()
+
+    if not review_targets:
+        message = "📘 今日の復習対象はありません！ゆっくり休もう✨️"
+    else:
+        message = "🔁 今日の復習対象はこちら！\n\n"
+        for task in review_targets:
+            message += (
+                f"📘 {task['subject']} : {task['title']}\n"
+                f"📅 学習日：{task['date']}({task['review_stage']}回目の復習)\n\n"
+            )
+
+    try:
+        line_bot_api.push_message(
+            USER_ID,
+            TextSendMessage(text=message)
+        )
+        print("✅️ 復習Push送信成功！")
+    except Exception as e:
+        print(f"❌️ Push通知送信失敗：{e}")
+
 # Push通知を送るためのエンドポイント（Render上で手動アクセス or スケジューラー用）
 @app.route("/push_daily_quests", methods=["GET"])
 def push_daily_quests():
@@ -173,11 +196,11 @@ def trigger_weekly_report():
 
 @app.route("/push_review_reminder", methods=["GET"])
 def push_review_reminder():
-    if __name__ == "__main__":
-        targets = get_review_targets()
-        for t in targets:
-            print(f"🔁 復習対象: {t['subject']}：{t['title']}（{t['review_stage']}回目）")
-        return "OK", 200
+    try:
+        send_review_push()
+        return "✅️ Review reminder sent", 200
+    except Exception as e:
+        return f"❌️ Error: {str(e)}", 500
 
 @app.route("/callback", methods=["POST"])
 def callback():
