@@ -154,10 +154,9 @@ def record_task_completion(subject, title):
 # 感情ログを保存
 def record_emotion_log(emoji, focus, comment):
     sheet = get_emotion_sheet()
-    today = datetime.now().strftime("%Y-%m-%d")
-    jst = ZoneInfo("Asia/Tokyo")
-    aware_jst = datetime.now(jst)
-    sheet.append_row([aware_jst, emoji, focus, comment])
+    today = get_jst_date()
+
+    sheet.append_row([today, emoji, focus, comment])
     return True
 
 # 達成済みタスクの取得関数
