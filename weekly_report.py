@@ -2,6 +2,7 @@ from collections import Counter
 from datetime import datetime, timedelta
 from google_sheets_util import get_sheet, get_emotion_sheet, append_row_to_sheet
 from openai import OpenAI
+from zoneinfo import ZoneInfo
 
 client = OpenAI()
 import os
@@ -9,7 +10,9 @@ import os
 def get_week_range():
     """今週の月曜〜日曜の日付範囲を取得"""
     today = datetime.now()
-    start = today - timedelta(days=today.weekday()) # 月曜日
+    jst = ZoneInfo("Asia/Tokyo")
+    aware_jst = datetime.now(jst)
+    start = aware_jst - timedelta(days=aware_jst.weekday()) # 月曜日
     end = start + timedelta(days=6) # 日曜日
     return start.date(), end.date()
 
@@ -99,7 +102,6 @@ def create_weekly_report_message(summary_data, summary_comment):
 
 def record_weekly_report(summary_data, comment):
     row = [
-        summary_data.get('日付'),
         summary_data.get('週'),
         summary_data.get('理想達成数'),
         summary_data.get('実達成数'),
