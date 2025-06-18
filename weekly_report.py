@@ -12,7 +12,7 @@ def get_week_range():
     """今週の月曜〜日曜の日付範囲を取得"""
     today = get_jst_date()
 
-    start = today - timedelta(days=today.weekday()) # 月曜日
+    start = today - timedelta(days=datetime().weekday()) # 月曜日
     end = start + timedelta(days=6) # 日曜日
     return start.date(), end.date()
 
