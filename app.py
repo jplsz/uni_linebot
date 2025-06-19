@@ -41,6 +41,20 @@ def extract_lesson_number(title):
     match = re.search(r"第(\d+)回", title)
     return int(match.group(1)) if match else 9999 #該当なしは後回し
 
+# 達成済みタスクの取得関数
+def get_completed_tasks():
+    try:
+        sheet = get_sheet()
+        records = sheet.get_all_records()
+        completed = set()
+        for row in records:
+            print(f"[DEBUG] 読み込んだ行: {row}")
+            completed.add((row["Subject"].strip(), row["Title"].strip()))
+        return completed
+    except Exception as e:
+        print(f"❌️ 達成済みタスクの取得失敗: {e}")
+        return set()
+
 # 今日のクエストを抽出
 def get_todays_quests(task_list, max_tasks=3):
     today = datetime.now().date()
@@ -98,20 +112,6 @@ def record_emotion_log(emoji, focus, comment):
 
     sheet.append_row([today, emoji, focus, comment])
     return True
-
-# 達成済みタスクの取得関数
-def get_completed_tasks():
-    try:
-        sheet = get_sheet()
-        records = sheet.get_all_records()
-        completed = set()
-        for row in records:
-            print(f"[DEBUG] 読み込んだ行: {row}")
-            completed.add((row["Subject"].strip(), row["Title"].strip()))
-        return completed
-    except Exception as e:
-        print(f"❌️ 達成済みタスクの取得失敗: {e}")
-        return set()
 
 # 未達成タスクの総数
 def get_tasks_total():
