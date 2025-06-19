@@ -29,6 +29,8 @@ USER_ID = "U7f366710ac3959bbaa4041a5c6a2dc5c" # ←自分のLINE ID
 # 文字列の正規化
 def normalize(text):
     """文字列をNFKCで正規化し、空白・不可視文字を除去"""
+    if text is None:
+        return ''
     return unicodedata.normalize("NFKC", text).strip()
 
 # 日付の形式に対応
@@ -137,7 +139,7 @@ def get_tasks_total():
             subject = normalize(task["subject"])
             title = normalize(task["title"])
             is_completed = (subject, title) in completed
-            print(f"[DEBUG] タスク: ({subject}, {title}), 締切: {deadline}, 完了済: {is_completed}")
+            print(f"[DEBUG] 比較対象: ({subject}, {title}), 完了済: {is_completed}")
             if deadline >= today and not is_completed:
                 filtered.append(task)
         except Exception as e:
