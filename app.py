@@ -30,7 +30,9 @@ USER_ID = "U7f366710ac3959bbaa4041a5c6a2dc5c" # ←自分のLINE ID
 def normalize(text):
     if not text:
         return ''
-    return unicodedata.normalize("NFKC", text).strip()
+    text = unicodedata.normalize("NFKC", text).strip()
+    text = re.sub(r'\s', '', text)
+    return text.lower()
 
 # 日付の形式に対応
 def parse_deadline(date_str):
@@ -96,6 +98,8 @@ def get_todays_quests(task_list, max_tasks=3):
 def record_task_completion(subject, title):
     date = get_jst_date()
     timestamp = get_jst_time()
+    subject = normalize(subject)
+    title = normalize(title)
 
     try:
         sheet = get_sheet()
@@ -103,12 +107,9 @@ def record_task_completion(subject, title):
         # 重複チェック（同じ日付・科目・タイトルが既にあるか）
         records = sheet.get_all_records()
         for row in records:
-            if normalize(row["Date"]) == date and normalize(row["Subject"]) == normalize(subject) and normalize(row["Title"]) == normalize(title):
+            if normalize(row["Date"]) == date and normalize(row["Subject"]) == subject and normalize(row["Title"]) == title:
                 return False # 重複
         # 新規行の追加
-        subject = normalize(subject)
-        title = normalize(title)
-
         sheet.append_row([date, subject, title, timestamp])
         return True
     except Exception as e:
