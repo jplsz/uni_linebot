@@ -132,8 +132,13 @@ def get_tasks_total():
     filtered = []
     for task in task_list:
         try:
+
             deadline = parse_deadline(task["deadline"])
-            if deadline >= today and (normalize(task["subject"]), normalize(task["title"])) not in completed:
+            subject = normalize(task["subject"])
+            title = normalize(task["title"])
+            is_completed = (subject, title) in completed
+            print(f"[DEBUG] タスク: ({subject}, {title}), 締切: {deadline}, 完了済: {is_completed}")
+            if deadline >= today and not is_completed:
                 filtered.append(task)
         except Exception as e:
             print(f"❌️ タスクフィルタ中エラー: {e}")
@@ -141,7 +146,7 @@ def get_tasks_total():
     # 抽出されたタスクの総数をカウント
     total = len(filtered)
     # print(filtered)
-    print(completed)
+    # print(completed)
     return total
 
 # 週次レポート
