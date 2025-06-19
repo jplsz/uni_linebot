@@ -112,6 +112,26 @@ def get_completed_tasks():
         print(f"❌️ 達成済みタスクの取得失敗: {e}")
         return set()
 
+# 未達成タスクの総数
+def get_tasks_total():
+    today = datetime.now().date()
+    completed = get_completed_tasks()
+    task_list = load_tasks()
+
+    # 締切が今日以降かつ未達成のタスクを抽出
+    filtered = []
+    for task in task_list:
+        try:
+            deadline = parse_deadline(task["deadline"])
+            if deadline >= today and (task["subject"], task["title"]) not in completed:
+                filtered.append(task)
+        except Exception as e:
+            print(f"❌️ タスクフィルタ中エラー: {e}")
+            continue
+    # 抽出されたタスクの総数をカウント
+    total = len(filtered)
+    return total
+
 # 週次レポート
 def send_weekly_report():
     try:
@@ -249,7 +269,7 @@ def handle_message(event):
             for q in quests:
                 reply += (
                 f"📘 {q['subject']}：{q['title']}\n"
-                f"🗓️ 締切：{q['deadline']}\n\n"
+                f"🗓️ 締切：{q['deadline']}\n"
                 )
     elif text == "週次レポート":
         try:
@@ -257,6 +277,12 @@ def handle_message(event):
             reply = "📊 週次レポートを送信しました！"
         except Exception as e:
             reply = f"❌️ エラー：{str(e)}"
+    elif text == "合計":
+        try:
+            total = get_tasks_total()
+            reply = f"📚️ 未達成タスク：{total}件"
+        except Exception as e:
+            reply = "❌️ 合計の取得中にエラーが発生しました。"
     elif text.startswith("🧠 感情ログ："):
         try:
             match = re.match(r"🧠 感情ログ：(.+?) 集中(\d+%) コメント：(.*)", text)
@@ -274,13 +300,6 @@ def handle_message(event):
     elif text.startswith("🔁"):
         # 例) 🔁福祉心理学:第1回(映像授業)
         try:
-        #     rest = text[1:].strip()
-        #     subject_title, stage = rest.split("：", 1)
-        #     subject, title = subject_title.split("：", 1)
-        #     # subject = subject.strip()
-        #     # title = title.strip()
-        #     stage = stage.strip()
-
             match = re.match(r"🔁(.+?)：(.+?)【(.+?)】", text)
             if match:
                 subject = match.group(1).strip()
