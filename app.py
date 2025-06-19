@@ -8,6 +8,7 @@ import os
 import gspread
 import re
 import random
+import unicodedata
 from oauth2client.service_account import ServiceAccountCredentials
 from io import StringIO
 from weekly_report import fetch_weekly_summary, generate_summary_comment, create_weekly_report_message, get_week_range, record_weekly_report
@@ -24,6 +25,11 @@ handler = WebhookHandler(os.getenv("LINE_CHANNEL_SECRET", "YOUR_SECRET"))
 
 # ユーザーID（Push先：自分のID）
 USER_ID = "U7f366710ac3959bbaa4041a5c6a2dc5c" # ←自分のLINE ID
+
+# 文字列の正規化
+def normalize(text):
+    """文字列をNFKCで正規化し、空白・不可視文字を除去"""
+    return unicodedata.normalize("NFKC", text).strip()
 
 # 日付の形式に対応
 def parse_deadline(date_str):
@@ -49,7 +55,7 @@ def get_completed_tasks():
         completed = set()
         for row in records:
             print(f"[DEBUG] 読み込んだ行: {row}")
-            completed.add((row["Subject"].strip(), row["Title"].strip()))
+            completed.add((normalize(row["Subject"]), normalize(row["Title"])))
         return completed
     except Exception as e:
         print(f"❌️ 達成済みタスクの取得失敗: {e}")
@@ -96,9 +102,12 @@ def record_task_completion(subject, title):
         # 重複チェック（同じ日付・科目・タイトルが既にあるか）
         records = sheet.get_all_records()
         for row in records:
-            if row["Date"].strip() == date and row["Subject"].strip() == subject and row["Title"].strip == title:
+            if normalize(row["Date"]) == date and normalize(row["Subject"]) == normalize(subject) and normalize(row["Title"]) == normalize(title):
                 return False # 重複
         # 新規行の追加
+        subject = normalize(subject)
+        title = normalize(title)
+
         sheet.append_row([date, subject, title, timestamp])
         return True
     except Exception as e:
@@ -124,7 +133,7 @@ def get_tasks_total():
     for task in task_list:
         try:
             deadline = parse_deadline(task["deadline"])
-            if deadline >= today and (task["subject"], task["title"]) not in completed:
+            if deadline >= today and (normalize(task["subject"]), normalize(task["title"])) not in completed:
                 filtered.append(task)
         except Exception as e:
             print(f"❌️ タスクフィルタ中エラー: {e}")
