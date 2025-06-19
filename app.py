@@ -142,7 +142,7 @@ def get_tasks_total():
                 print(f"[DEBUG] 未達: ({subject}, {title})")
             else:
                 print(f"[DEBUG] 達成済: ({subject}, {title})")
-            if deadline >= today and not is_completed:
+            if deadline >= today and (subject, title) not in completed:
                 filtered.append(task)
         except Exception as e:
             print(f"❌️ タスクフィルタ中エラー: {e}")
