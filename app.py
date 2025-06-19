@@ -106,7 +106,8 @@ def get_completed_tasks():
         records = sheet.get_all_records()
         completed = set()
         for row in records:
-            completed.add((row["Subject"], row["Title"]))
+            print(f"[DEBUG] 読み込んだ行: {row}")
+            completed.add((row["Subject"].strip(), row["Title"].strip()))
         return completed
     except Exception as e:
         print(f"❌️ 達成済みタスクの取得失敗: {e}")
@@ -130,6 +131,7 @@ def get_tasks_total():
             continue
     # 抽出されたタスクの総数をカウント
     total = len(filtered)
+    print(filtered)
     return total
 
 # 週次レポート
