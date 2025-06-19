@@ -133,14 +133,15 @@ def get_tasks_total():
     for task in task_list:
         try:
             deadline = parse_deadline(task["deadline"])
-            if deadline >= today and (normalize(task["Subject"]), normalize(task["Title"])) not in completed:
+            if deadline >= today and (normalize(task["subject"]), normalize(task["title"])) not in completed:
                 filtered.append(task)
         except Exception as e:
             print(f"❌️ タスクフィルタ中エラー: {e}")
             continue
     # 抽出されたタスクの総数をカウント
     total = len(filtered)
-    print(filtered)
+    # print(filtered)
+    print(completed)
     return total
 
 # 週次レポート
