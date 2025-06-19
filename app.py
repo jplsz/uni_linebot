@@ -30,7 +30,9 @@ USER_ID = "U7f366710ac3959bbaa4041a5c6a2dc5c" # ←自分のLINE ID
 def normalize(text):
     if not text:
         return ''
-    text = unicodedata.normalize("NFKC", text).strip()
+    text = unicodedata.normalize("NFKC", text)
+    text = text.strip()
+    text = re.sub(r'[\u200B-\u200D\uFEFF]', '', text)
     text = re.sub(r'\s', '', text)
     return text.lower()
 
@@ -110,6 +112,8 @@ def record_task_completion(subject, title):
             if normalize(row["Date"]) == date and normalize(row["Subject"]) == subject and normalize(row["Title"]) == title:
                 return False # 重複
         # 新規行の追加
+        subject = normalize(subject)
+        title = normalize(title)
         sheet.append_row([date, subject, title, timestamp])
         return True
     except Exception as e:
