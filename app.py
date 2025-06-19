@@ -111,6 +111,9 @@ def record_task_completion(subject, title):
         for row in records:
             if normalize(row["Date"]) == date and normalize(row["Subject"]) == subject and normalize(row["Title"]) == title:
                 return False # 重複
+        for row in records:
+            subj = normalize(row["Subject"])
+            print(f"[DEBUG] Subject raw: {repr(row['Subject'])} → normalized: {subj}")
         # 新規行の追加
         subject = normalize(subject)
         title = normalize(title)
@@ -143,10 +146,6 @@ def get_tasks_total():
             subject = normalize(task["subject"])
             title = normalize(task["title"])
 
-            if (subject, title) not in completed:
-                print(f"[DEBUG] 未達: ({subject}, {title})")
-            else:
-                print(f"[DEBUG] 達成済: ({subject}, {title})")
             if deadline >= today and (subject, title) not in completed:
                 filtered.append(task)
         except Exception as e:
