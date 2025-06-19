@@ -31,10 +31,10 @@ def normalize(text):
     if not text:
         return ''
     text = unicodedata.normalize("NFKC", text)
-    text = text.strip()
     text = re.sub(r'[\u200B-\u200D\uFEFF]', '', text)
+    text = re.sub(r'[\x00-\x1F\x7F]', '', text)
     text = re.sub(r'\s', '', text)
-    return text.lower()
+    return text
 
 # 日付の形式に対応
 def parse_deadline(date_str):
