@@ -31,7 +31,7 @@ def normalize(text):
     if not text:
         return ''
     text = unicodedata.normalize("NFKC", text)
-    text = re.sub(r'[\u200B-\u200D\uFEFF]', '', text)
+    text = re.sub(r'[\u200B-\u200D\uFEFFuFE0F]', '', text)
     text = re.sub(r'[\x00-\x1F\x7F]', '', text)
     text = re.sub(r'\s', '', text)
     return text
@@ -51,6 +51,19 @@ def extract_lesson_number(title):
     """タイトルから「第◯回」の数字を抽出"""
     match = re.search(r"第(\d+)回", title)
     return int(match.group(1)) if match else 9999 #該当なしは後回し
+
+# 絵文字を除去
+def remove_emojis(text):
+    emoji_pattern = re.compile(
+        "["
+        "\U0001F300-\U0001F64F" # 顔文字・自然・手など
+        "\U0001F680-\U0001F6FF"  # 乗り物・地図記号
+        "\u2600-\u26FF"          # その他の記号
+        "\u2700-\u27BF"          # その他の記号
+        "\uFE0F"                 # 絵文字用バリアントセレクタ
+        "]+", flags=re.UNICODE
+    )
+    return emoji_pattern.sub("", text).strip()
 
 # 達成済みタスクの取得関数
 def get_completed_tasks():
@@ -268,13 +281,14 @@ def handle_message(event):
     raw_text = event.message.text
     text = clean_text(raw_text)
 
-    if text.startswith("✅️"):
+    if text.startswith("✅️") or text.startswith("✅"):
         # 例：✅️福祉心理学:第1回(映像授業)
         try:
-            rest = text[1:].strip()
+            rest = remove_emojis(text)
             subject, title = rest.split("：", 1)
-            subject = subject.strip()
-            title = title.strip()
+
+            subject = normalize(subject)
+            title = normalize(title)
 
             success = record_task_completion(subject, title)
             if success:
